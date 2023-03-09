@@ -40,7 +40,7 @@ const App = () => {
       }}
     >
       <Card data={data} />
-      <footer>Desarrollado por: Sneyder Silva.</footer>
+      <footer>Developed by: Sneyder Silva.</footer>
     </div>
   );
 };

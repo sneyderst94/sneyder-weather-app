@@ -54,7 +54,7 @@ const Card = ({ data }) => {
             setActive(!active);
           }}
         >
-          {active ? 'Cambiar a F°' : 'Cambiar a C°'}
+          {active ? 'Switch to F°' : 'switch to C°'}
         </button>
       </div>
     </div>

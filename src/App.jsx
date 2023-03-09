@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div
-      className="App flex justify-around items-center flex-col"
+      className="App flex justify-center items-center flex-col"
       style={{
         backgroundImage: `url("${bg}")`,
         backgroundRepeat: 'no-repeat',

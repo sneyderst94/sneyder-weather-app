@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div
-      className="App h-full flex justify-center items-center flex-col"
+      className="App flex justify-center items-center flex-col"
       style={{
         backgroundImage: `url("${bg}")`,
         backgroundRepeat: 'no-repeat',
@@ -40,6 +40,7 @@ const App = () => {
       }}
     >
       <Card data={data} />
+      <footer>Desarrollado por: Sneyder Silva.</footer>
     </div>
   );
 };

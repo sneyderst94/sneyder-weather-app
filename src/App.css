@@ -1,3 +1,19 @@
 .App {
+    height: 100%;
     background-image: url("https://cdn.pixabay.com/photo/2017/10/12/18/29/night-2845347_1280.jpg");
+}
+footer {
+    text-align: center;
+    color: #ffffff;
+    padding: 50px 0 0 0;
+    font-weight: 400;
+    font-style: italic;
+    text-shadow: 0px 4px 4px rgb(24, 24, 24);
+}
+
+/* Media query*/
+@media (max-width: 710px){
+    footer {
+        padding: 20px 0 0 0 ;
+    }
 }

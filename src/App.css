@@ -1,8 +1,29 @@
 .App {
-    height: 100%;
+    height: 100vh;
+    padding: 20px 0;
     background-image: url("https://cdn.pixabay.com/photo/2017/10/12/18/29/night-2845347_1280.jpg");
 }
+
+.toggle {
+    padding: 3px 0;
+    border: 1px solid rgb(171, 169, 169);
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: 16px;
+  
+}
+.span {
+    background-color: #a6a8aa;
+    box-shadow:  0px 1px rgba(105, 106, 107, 0.976);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+   
+
+}
 footer {
+    font-size: 20px;
     text-align: center;
     color: #ffffff;
     padding: 50px 0 0 0;
@@ -13,7 +34,12 @@ footer {
 
 /* Media query*/
 @media (max-width: 1075px){
+    .App {
+        height: 100vh;
+        padding: 0;
+    }
     footer {
+        font-size: 18px;
         padding: 20px 0 0 0 ;
     }
 }

@@ -6,8 +6,9 @@ import axios from 'axios';
 const App = () => {
   const [data, setData] = useState(null);
   const [bg, setBg] = useState(null);
-  const [s, setS] = useState('3%');
+  const [onOff, setOnOff] = useState('3%');
 
+  //Función para cambiar modo claro y oscuro
   const toggleBackground = () => {
     setBg(
       bg ===
@@ -15,9 +16,10 @@ const App = () => {
         ? 'https://cdn.pixabay.com/photo/2017/10/12/18/29/night-2845347_1280.jpg'
         : 'https://www.infocampo.com.ar/wp-content/uploads/2020/07/Clima-Tiempo-despejado-Trigo.jpg',
     );
-    setS(s === '3%' ? '60%' : '3%');
+    setOnOff(onOff === '3%' ? '60%' : '3%');
   };
 
+  // Función para obtener la data del clima
   const getWeather = (lat, lon) => {
     axios
       .get(
@@ -29,8 +31,10 @@ const App = () => {
   };
 
   useEffect(() => {
+    // Función para optener la latitud y longitud del usuario
     navigator.geolocation.getCurrentPosition((position) => {
       getWeather(position.coords.latitude, position.coords.longitude);
+      // función para obtener el horario del usuario y detantar si usar background claro u oscuro
       let date = new Date();
       if (date.getHours() >= 6 && date.getHours() < 21) {
         setBg(
@@ -51,7 +55,7 @@ const App = () => {
       }}
     >
       <button className="toggle" onClick={toggleBackground}>
-        <p className="span" style={{ marginLeft: `${s}`, transition: '0.6s' }}></p>
+        <p className="span" style={{ marginLeft: `${onOff}`, transition: '0.6s' }}></p>
       </button>
       <Card data={data} />
       <footer>Developed by: Sneyder Silva.</footer>

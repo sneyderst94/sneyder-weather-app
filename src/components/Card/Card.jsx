@@ -1,4 +1,5 @@
 import './Card.css';
+import Loader from '../Loader/Loader';
 import wind from './Card__img/wind.png';
 import humidityImg from './Card__img/humidity.png';
 import { useEffect, useState } from 'react';
@@ -13,6 +14,8 @@ const Card = ({ data }) => {
   }, [data, active]);
 
   return (
+    <>
+    {!data ? <Loader /> :
     <div className="Card">
       <div>
         <p className="city__contry">
@@ -56,8 +59,9 @@ const Card = ({ data }) => {
         >
           {active ? 'Switch to F°' : 'switch to C°'}
         </button>
-      </div>
-    </div>
+      </div> 
+    </div> }
+    </>
   );
 };
 
